@@ -1,0 +1,25 @@
+// CHANGE PIXELS TO REMS
+
+@media screen and (max-width: 768px) {
+    .col-8, .col-6, .col-4, .col-3 {
+        width: 100%;
+    }
+}
+
+// hides hamburger menu at larger screen sizes
+@media screen and (min-width: 651px) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
+// hides nav buttons and shows hamburger menu
+@media screen and (max-width: 650px) {
+    .main-heading h1 {
+        font-size: 2.5rem;
+    }
+
+    .browser-nav {
+        display: none;
+    }
+}

@@ -1,0 +1,177 @@
+@import 'config';
+@import 'grid';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eee;
+    color: $black;
+    line-height: 1.5rem;
+}
+
+p {
+    padding-bottom: 1rem;
+}
+
+.white-bar {
+    width: 100%;
+    background: $white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    
+    .top-bar {
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    .main-heading {
+        width: 100%;
+        text-align: center;
+    
+        h1 {
+            color: $black;
+            font-size: 4rem;
+            font-weight: bold;
+            line-height: 4.1rem;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    
+        .browser-nav {
+            width: 100%;
+            text-align: center;
+            margin-top:15px;
+        
+            .nav-link {
+                display: inline-block;
+            }
+        }
+
+        .mobile-nav {
+            width: 100%;
+            margin: 15px auto;
+
+            .nav-link {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 300px;
+    padding: 0px;
+
+    .item {
+        float: left;
+        padding: 10px;
+
+        .entry {
+            background-color: $white;
+            width: 100%;
+            padding: 40px;
+
+            a, a:active {
+                color: $black;
+                font-weight: bold;
+                @include transitionEaseAll;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                font-weight: bold;
+                line-height: 2.3rem;
+                letter-spacing: 1px;
+                padding-bottom: 1.2rem;
+                @include transitionEaseAll;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin: 20px 0px;
+            }
+
+            h4 {
+                font-size: 0.9rem;
+                font-weight: bold;
+                line-height: 1.8rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .img-testimonial {
+                float: left;
+                padding: 20px;
+
+                img {
+                    border-radius: 50px;
+                }
+            }
+        }
+
+        .work-link {
+            display: inline-block;
+        }
+    }
+}
+
+footer {
+    max-width: 1000px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 0px;
+
+    .item {
+        float: left;
+        padding: 10px;
+
+        .entry {
+            background-color: $white;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+    }
+}
+
+.fab {
+    font-size: 1.5rem;
+    padding: 0px 7px;
+    @include transitionEaseAll;
+}
+
+.centered {
+    float: none;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+@import 'media';
