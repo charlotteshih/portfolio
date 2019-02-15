@@ -29,6 +29,7 @@ p {
   padding: 20px;
   position: fixed;
   top: 0;
+  box-shadow: 0px 0px 20px rgba(20, 20, 20, 0.2);
 }
 
 .white-bar .top-bar {
@@ -43,7 +44,8 @@ p {
 
 .white-bar .main-heading h1 {
   font-family: 'Yeseva One', sans-serif;    /* HEADER FONT */
-  color: #2a2a2a;
+  color: #3E283F;
+  text-shadow: 2px 2px #FFBC5A;
   font-size: 4rem;
   font-weight: bold;
   line-height: 4.1rem;
@@ -51,18 +53,44 @@ p {
 }
 
 .white-bar .main-heading .tagline {
+  font-size: 0.8em;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .white-bar .main-heading .browser-nav {
-  width: 100%;
-  text-align: center;
   margin-top: 15px;
 }
 
-.white-bar .main-heading .browser-nav li {
-  display: inline-block;
+.white-bar .main-heading .browser-nav ul {
+  display: flex;
+  justify-content: center;
+  max-width: 960px;
+  width: 100%;
+  margin: 30px auto;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.white-bar .main-heading .browser-nav li a {
+  font-size: 0.7em;
+  letter-spacing: 1px;
+  color: #3E283F;
+  text-decoration: none;
+  border: 1px solid #3E283F;
+  box-shadow: 1px 1px #FFBC5A;
+  padding: 7px 40px;
+  margin: 0px 10px;
+  font-weight: bold;
+}
+
+.white-bar .main-heading .browser-nav li a:hover {
+  text-decoration: none;
+  background-color: #3E283F;
+  color: #fcfcfc;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .white-bar .main-heading .mobile-nav {
@@ -103,10 +131,13 @@ p {
 
 .container .item .entry a:hover, .container .item .entry a:active:hover {
   text-decoration: none;
+  color: #FFBC5A;
 }
 
 .container .item .entry h2 {
   font-family: 'Yeseva One', sans-serif;    /* HEADER FONT */
+  color: #A1403A;
+  text-shadow: 1px 1px #FFBC5A;
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 2.3rem;
@@ -117,13 +148,6 @@ p {
 }
 
 .container .item .entry h3 {
-  font-family: 'Yeseva One', sans-serif;    /* HEADER FONT */
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin: 20px 0px;
-}
-
-.container .item .entry h4 {
   font-size: 0.9rem;
   font-weight: bold;
   line-height: 1.8rem;
@@ -140,7 +164,11 @@ p {
 }
 
 .container .item .work-link {
-  display: inline-block;
+  padding-right: 15px;
+}
+
+.container .item .work-link:hover {
+  color: #FFBC5A;
 }
 
 footer {
@@ -161,7 +189,19 @@ footer .item .entry {
   padding: 10px;
   text-align: center;
   font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+footer .item .entry a {
+  color: #2a2a2a;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+footer .item .entry a:hover {
+  color: #FFBC5A;
 }
 
 .fab {
