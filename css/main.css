@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-
 
   font-family: 'Muli', serif;    /* BODY FONT */
   color: #2a2a2a;
@@ -24,12 +24,13 @@ p {
 }
 
 .white-bar {
-  width: 100%;
-  background: #fcfcfc;
-  padding: 20px;
   position: fixed;
+  width: 100%;
   top: 0;
+  padding: 20px;
   height: 130px;
+
+  background: #fcfcfc;
   box-shadow: 0px 0px 20px rgba(20, 20, 20, 0.2);
 }
 
@@ -51,21 +52,26 @@ p {
 }
 
 .white-bar .main-heading .header-left h1 {
-  font-family: 'Yeseva One', sans-serif;    /* HEADER FONT */
-  color: #3E283F;
-  text-shadow: 2px 2px #FFBC5A;
+  font-family: 'Yeseva One', sans-serif;
+  color: #3F2540;
   font-size: 3rem;
   font-weight: bold;
   line-height: 3.5rem;
   letter-spacing: 2px;
+  text-shadow: 2px 2px #FFBC5A;
+}
+
+.white-bar .main-heading .header-left a {
+  text-decoration: none;
 }
 
 .white-bar .main-heading .header-left .tagline {
-  font-size: 0.7em;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: bold;
   margin-left: 7px;
+
+  font-size: 0.7em;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .white-bar .main-heading .header-right {
@@ -84,27 +90,33 @@ p {
   max-width: 960px;
   width: 100%;
   margin: 30px auto;
+
   text-transform: uppercase;
   list-style: none;
 }
 
 .white-bar .main-heading .header-right .browser-nav li a {
   font-size: 0.7em;
+  color: #3F2540;
+  font-weight: bold;
   letter-spacing: 1px;
-  color: #3E283F;
   text-decoration: none;
-  border: 1px solid #3E283F;
-  box-shadow: 1px 1px #FFBC5A;
+
+  border: 1px solid #3F2540;
   padding: 7px 40px;
   margin: 0px 10px;
-}
+  box-shadow: 1px 1px #FFBC5A;
 
-.white-bar .main-heading .header-right .browser-nav li a:hover {
-  text-decoration: none;
-  background-color: #3E283F;
-  color: #fcfcfc;
+  cursor: pointer;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+
+.white-bar .main-heading .header-right .browser-nav li a:hover,
+.white-bar .main-heading .header-right .browser-nav li a:active {
+  color: #FFBC5A;
+  background-color: #3F2540;
+  text-decoration: none;
 }
 
 .white-bar .main-heading .header-right .mobile-nav {
@@ -120,10 +132,18 @@ p {
   cursor: pointer;
 }
 
+.mobile-nav .hamburger-menu:hover,
+.mobile-nav .hamburger-menu:active {
+  opacity: 0.5;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
 .mobile-nav .hamburger-menu span {
   display: block;
   border-bottom: 2px solid #2a2a2a;
   padding-bottom: 6px;
+
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -141,21 +161,24 @@ p {
 }
 
 .overlay {
-  width: 100%;
   position: fixed;
+  width: 100%;
   top: 100px;
   left: 0;
   opacity: 0;
+
   visibility: hidden;
   overflow: hidden;
+
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
 .overlay.open {
+  height: 100%;
   background-color: #fcfcfc;
   opacity: 0.95;
-  height: 100%;
+
   visibility: visible;
 }
 
@@ -168,17 +191,21 @@ p {
   height: 33.3%;
   height: calc(100% / 3);
   width: 100%;
+
+  color: #2a2a2a;
   font-size: 1.5rem;
   line-height: 500%;
   letter-spacing: 3px;
-  color: #2a2a2a;
   text-decoration: none;
   text-transform: uppercase;
+
+  cursor: pointer;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
-.overlay .menu-overlay li a:hover {
+.overlay .menu-overlay li a:hover,
+.overlay .menu-overlay li a:active {
   color: #FFBC5A;
   padding-left: 20px;
 }
@@ -202,28 +229,32 @@ p {
   padding: 40px;
 }
 
-.container .item .entry a, .container .item .entry a:active {
-  color: #3E283F;
+.container .item .entry a {
+  color: #3F2540;
   font-weight: bold;
+
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
-.container .item .entry a:hover, .container .item .entry a:active:hover {
-  text-decoration: none;
+.container .item .entry a:hover,
+.container .item .entry a:active {
   color: #FFBC5A;
+  text-decoration: none;
 }
 
-.container .item .entry h2 {
-  font-family: 'Yeseva One', sans-serif;    /* HEADER FONT */
+.item .entry h2 {
+  margin-top: 15px;
+  padding-bottom: 1.2rem;
+
+  font-family: 'Yeseva One', sans-serif;
   color: #A1403A;
-  text-shadow: 1px 1px #FFBC5A;
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 2.3rem;
   letter-spacing: 1px;
-  padding-bottom: 1.2rem;
-  margin-top: 15px;
+  text-shadow: 1px 1px #FFBC5A;
+
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -232,8 +263,8 @@ p {
   font-size: 0.9rem;
   font-weight: bold;
   line-height: 1.8rem;
-  text-transform: uppercase;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .container .item .entry .img-testimonial {
@@ -245,24 +276,24 @@ p {
 .container .item .work-link {
   padding: 7px 30px;
   margin-right: 10px;
-  text-transform: uppercase;
-  font-size: 0.7rem;
+
   color: #2a2a2a;
+  font-size: 0.7rem;
   letter-spacing: 1px;
   text-decoration: none;
-  border: 1px solid #3E283F;
+  text-transform: uppercase;
+
+  border: 1px solid #3F2540;
   box-shadow: 1px 1px #FFBC5A;
 }
 
-.container .item .work-link:hover {
-  background-color: #3E283F;
+.container .item .work-link:hover,
+.container .item .work-link:active {
+  background-color: #3F2540;
 }
 
-.email-me {
-  font-size: 1.5rem;
-  line-height: 3rem;
-  font-family: 'Yeseva One', serif;
-  text-decoration: none;
+.sec-about-me {
+  margin: 150px 0px;
 }
 
 footer {
@@ -278,45 +309,44 @@ footer .item {
 }
 
 footer .item .entry {
-  background-color: #fcfcfc;
   width: 100%;
   padding: 10px;
+  background-color: #fcfcfc;
   text-align: center;
+
   font-size: 0.7rem;
   font-weight: bold;
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 footer .item .entry a {
-  color: #3E283F;
+  color: #3F2540;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
-footer .item .entry a:hover {
+footer .item .entry a:hover,
+footer .item .entry a:active {
   color: #FFBC5A;
 }
 
-.fab {
-  font-size: 1.5rem;
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fab, .far {
   padding: 0px 7px;
+  font-size: 1.5rem;
 }
 
-.fab a {
-  font-size: 2.5rem;
-  padding: 0px 10px;
+.fab a, .far a {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
-.fab a:hover {
+.fab a:hover, .far a:hover,
+.fab a:hover, .far a:active {
   color: #FFBC5A;
-}
-
-.far {
-  font-size: 30px;
-  color: #3E283F;
 }
 
 .centered {
@@ -362,12 +392,16 @@ footer .item .entry a:hover {
   .browser-nav {
     display: none;
   }
+
+  .sec-about-me {
+    margin: 100px 0px;
+  }
 }
 
 @media screen and (max-width: 430px) {
   .work-link {
     display: block;
-    text-align: center;
     margin: 10px 0px;
+    text-align: center;
   }
 }

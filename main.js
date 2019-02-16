@@ -2,22 +2,22 @@
 
 function handleHamburgerMenu() {
     $('#hamburger').on('click', function(event) {
+        event.preventDefault();
         $(this).toggleClass('active');
         $('.overlay').toggleClass('open');
     });
 }
 
-function renderWorkPage() {
-    $('#work').on('click', function(event) {
-        $('.container').find('.js-portfolio').show();
-        $('.container').find('.js-about-me').hide();
-        $('.container').find('.js-contact').hide();
-        console.log('work link');
+function handleHamburgerClose() {
+    $('.menu-overlay').on('click', '.mob-nav-link', function(event) {
+        $('#hamburger').toggleClass('active');
+        $('.overlay').toggleClass('open');
     });
 }
 
 function loadPage() {
     handleHamburgerMenu();
+    handleHamburgerClose();
 }
 
 $(loadPage);
