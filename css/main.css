@@ -14,7 +14,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
-  font-family: 'Muli', serif;    /* BODY FONT */
+  font-family: 'Muli', serif;
   color: #2a2a2a;
   line-height: 1.5rem;
 }
@@ -113,7 +113,8 @@ p {
 }
 
 .white-bar .main-heading .header-right .browser-nav li a:hover,
-.white-bar .main-heading .header-right .browser-nav li a:active {
+.white-bar .main-heading .header-right .browser-nav li a:active,
+.white-bar .main-heading .header-right .browser-nav li a:focus {
   color: #FFBC5A;
   background-color: #3F2540;
   text-decoration: none;
@@ -205,7 +206,8 @@ p {
 }
 
 .overlay .menu-overlay li a:hover,
-.overlay .menu-overlay li a:active {
+.overlay .menu-overlay li a:active,
+.overlay .menu-overlay li a:focus {
   color: #FFBC5A;
   padding-left: 20px;
 }
@@ -238,7 +240,8 @@ p {
 }
 
 .container .item .entry a:hover,
-.container .item .entry a:active {
+.container .item .entry a:active,
+.container .item .entry a:focus {
   color: #FFBC5A;
   text-decoration: none;
 }
@@ -288,7 +291,8 @@ p {
 }
 
 .container .item .work-link:hover,
-.container .item .work-link:active {
+.container .item .work-link:active,
+.container .item .work-link:focus {
   background-color: #3F2540;
 }
 
@@ -326,7 +330,8 @@ footer .item .entry a {
 }
 
 footer .item .entry a:hover,
-footer .item .entry a:active {
+footer .item .entry a:active,
+footer .item .entry a:focus {
   color: #FFBC5A;
 }
 
@@ -345,7 +350,8 @@ footer .item .entry a:active {
 }
 
 .fab a:hover, .far a:hover,
-.fab a:hover, .far a:active {
+.fab a:hover, .far a:active,
+.fab a:hover, .far a:focus {
   color: #FFBC5A;
 }
 
