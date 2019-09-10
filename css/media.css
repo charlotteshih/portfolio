@@ -31,6 +31,11 @@
     .sec-about-me {
       margin: 100px 0px;
     }
+    .work-link {
+      display: block;
+      margin: 10px 0px;
+      text-align: center;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -45,4 +50,13 @@
       margin: 10px 0px;
       text-align: center;
     }
+}
+
+@media screen and (max-width: 365px) {
+  .white-bar .main-heading .header-left h1 {
+    font-size: 1rem;
+  }
+  .white-bar {
+    height: 120px;
+  }
 }
